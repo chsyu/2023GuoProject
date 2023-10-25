@@ -36,6 +36,7 @@ window.onload = function() {
 // }
 
 let clickstate = 0;
+let isPopupClick = false;
 let lookNum=0;
 let wagashi1 = document.querySelector("#wagashi1");
 let wagashi2 =document.querySelector("#wagashi2");
@@ -67,9 +68,19 @@ let popup_spring = document.querySelector("#popup_spring");
 
 
 
+
+
+
+
 wagashi1.onclick = function() {
     if(clickstate == 0){
-        gsap.fromTo("#popup_spring",1,{y:610},{y:0});
+        look1.style.display="none";
+        look2.style.display="none";
+        look3.style.display="none";
+        look4.style.display="none";
+        look5.style.display="none";
+        look6.style.display="none";
+        gsap.fromTo("#popup_spring",1,{y:1000},{y:0});
         popup_spring.style.display = "flex";
         look1.style.display = "flex";
         lookNum=1;
@@ -79,6 +90,12 @@ wagashi1.onclick = function() {
 };
 wagashi2.onclick = function() {
     if(clickstate == 0){
+        look1.style.display="none";
+        look2.style.display="none";
+        look3.style.display="none";
+        look4.style.display="none";
+        look5.style.display="none";
+        look6.style.display="none";
         gsap.fromTo("#popup_spring",1,{y:610},{y:0});
         look2.style.display = "flex";
         popup_spring.style.display = "flex";
@@ -89,6 +106,12 @@ wagashi2.onclick = function() {
 };
 wagashi3.onclick = function() {
     if(clickstate == 0){
+        look1.style.display="none";
+        look2.style.display="none";
+        look3.style.display="none";
+        look4.style.display="none";
+        look5.style.display="none";
+        look6.style.display="none";
         gsap.fromTo("#popup_spring",1,{y:610},{y:0});
         look6.style.display = "flex";
         popup_spring.style.display = "flex";
@@ -108,6 +131,12 @@ wagashi4.onclick = function() {
 };
 wagashi5.onclick = function() {
     if(clickstate == 0){
+        look1.style.display="none";
+        look2.style.display="none";
+        look3.style.display="none";
+        look4.style.display="none";
+        look5.style.display="none";
+        look6.style.display="none";
         gsap.fromTo("#popup_spring",1,{y:610},{y:0});
         popup_spring.style.display = "flex";
         look5.style.display = "flex";
@@ -117,6 +146,12 @@ wagashi5.onclick = function() {
 };
 wagashi6.onclick = function() {
     if(clickstate == 0){
+        look1.style.display="none";
+        look2.style.display="none";
+        look3.style.display="none";
+        look4.style.display="none";
+        look5.style.display="none";
+        look6.style.display="none";
         gsap.fromTo("#popup_spring",1,{y:610},{y:0});
         popup_spring.style.display = "flex";
         look4.style.display = "flex";
@@ -154,14 +189,11 @@ btn_left.onclick = function(){
 btn_right.onclick = function() {
     
     if(lookNum==1){
-            gsap.fromTo("#look1",1,{x:0},{x:-1500});
-            gsap.fromTo("#look2",1,{x:1500},{x:0});
-        
-        // gsap.fromTo("#look1",1,{opacity:1},{opacity:0});
         
         
-        // look1.style.display="none";
-        // look2.style.display="flex";
+        
+        look1.style.display="none";
+        look2.style.display="flex";
     }else if(lookNum==2){
         look2.style.display="none";
         look3.style.display="flex";
@@ -182,19 +214,26 @@ btn_right.onclick = function() {
     lookNum=lookNum+1;
 }
 
-btn_close.onclick = function() {
-    // btn_close.style.image="./image/close.png";
-    gsap.fromTo("#popup_spring",1,{y:0},{y:610});
-    clickstate=0;
-    // popup_spring.style.display="none";
-    // look1.style.display = "none";
-    // look2.style.display = "none";
-    // look3.style.display = "none";
-    // look4.style.display = "none";
-    // look5.style.display = "none";
-    // look6.style.display = "none";
+// btn_close.onclick = function() {
+//     // btn_close.style.image="./image/close.png";
+//     gsap.fromTo("#popup_spring",1,{y:0},{y:2000});
+//     clickstate=0;
+    
+// }
 
-}
+
+$(document).ready(function () {
+    
+    $("#btn_close").on('click',function () {
+        if(clickstate==1){
+            $('#popup_spring').fadeOut(300);
+            
+            clickstate=0;
+        };
+        
+       
+    });
+});
 
 
 function navigateToMainPage() {

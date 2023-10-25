@@ -21,12 +21,20 @@ h1 {
 
 }
 h6 {
-    font-size: 20px;
+    font-size: 1.3rem;
     color: antiquewhite;
     font-family: 'Zen Maru Gothic', sans-serif;
     font-weight: 400;
     padding-bottom: 3px;
     letter-spacing: 3px;
+    
+}
+h6.MENU {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+
 }
 
 
@@ -109,20 +117,28 @@ h6 {
 
 /* 右邊選單區塊 */
 .menu {
-    width: 150px;
+    width: 180px;
     height: 680px;
-    outline: solid 1px black;
+    /* outline: solid 1px black; */
     display: inline;
     /* align-items: center; */
     justify-content: center;
-    font-size: 10px;
+    
 }
 .menu_iconarea{
+
     margin-top: 20px;
-    height: auto;
+    margin-bottom: 0;
+    height: 33px;
+    width: 180px;
     display: flex;
-    justify-content: center;
-    outline: solid 0px;
+    align-items: center;
+    background-image: url(../image/卷軸.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    
+    
 
 }
 .menu_window{
@@ -131,36 +147,35 @@ h6 {
     justify-content: center;
     align-items: center;
     outline: solid 0px;
+    margin: 0;
 
 }
 .menu_windowcontent {
-    /* position: relative; */
-    /* position: absolute; */
-    /* width: 120px; */
-    /* height: 500px; */
-    /* margin: 20px 0px; */
+    background-image: url(../image/卷軸中間.png);
+    background-size: cover;
+    background-position: center center;
     padding: 20px 0px;
+    margin: 0 15px;
     width: 150px;
-    height: 0;
-    /* outline: solid 1px blue; */
-    display: block;
-    /* transition: all 5s ease-in; */
-    overflow: hidden;
-} 
-.menu_windowcontent.active {
     height: 300px;
-    
-}
+    /* outline: solid 1px blue; */
+    display: none;
+    /* transition: all 5s ease-in; */
+} 
+
 
 
 
 .menubottomrect {
-    position: absolute;
-    width: 150px;
+    /* position: absolute; */
+    width: 180px;
     margin: 0;
     top: 20px;
-    height: 35px;
-    background-color: rgba(236, 233, 217,1);
+    height: 33px;
+    /* background-color: rgba(236, 233, 217,1); */
+    background-image: url(../image/卷軸.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 
    
 
@@ -184,28 +199,19 @@ h6 {
     /* display: none; */
 
 }
-/* #link1 {
-    display: none;
-}
-#link2 {
-    display: none;
-}
-#link3 {
-    display: none;
-}
-#link4 {
-    display: none;
-} */
+
 
 /* 連結還要另外寫js控制當在哪個頁面時，要保持被選取的樣式 */
 a:link {
+    width: 50px;
     /* 設定還沒瀏覽過的連結樣式 */
-    font-size: 15px;
+    font-size: 1rem;
     color: #91726c;
     
     font-family: 'Zen Maru Gothic', sans-serif;
     font-weight: 400;
-    letter-spacing: 5px; 
+    /* letter-spacing: 1px;  */
+
     text-decoration: none;
 }
 a:visited {
