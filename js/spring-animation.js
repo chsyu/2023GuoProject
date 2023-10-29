@@ -56,6 +56,7 @@ let btn_left = document.querySelector("#btn_left");
 let btn_right = document.querySelector("#btn_right");
 let btn_close = document.querySelector("#btn_close");
 
+let container = document.querySelector("#container");
 let popup_spring = document.querySelector("#popup_spring");
 
 //gets current delay
@@ -82,6 +83,7 @@ wagashi1.onclick = function() {
         look6.style.display="none";
         gsap.fromTo("#popup_spring",1,{y:1000},{y:0});
         popup_spring.style.display = "flex";
+        container.classList.add("transparent");
         look1.style.display = "flex";
         lookNum=1;
         clickstate = 1;
@@ -97,6 +99,7 @@ wagashi2.onclick = function() {
         look5.style.display="none";
         look6.style.display="none";
         gsap.fromTo("#popup_spring",1,{y:610},{y:0});
+        container.classList.add("transparent");
         look2.style.display = "flex";
         popup_spring.style.display = "flex";
         
@@ -113,6 +116,7 @@ wagashi3.onclick = function() {
         look5.style.display="none";
         look6.style.display="none";
         gsap.fromTo("#popup_spring",1,{y:610},{y:0});
+        container.classList.add("transparent");
         look6.style.display = "flex";
         popup_spring.style.display = "flex";
         
@@ -123,6 +127,8 @@ wagashi3.onclick = function() {
 wagashi4.onclick = function() {
     if(clickstate == 0){
         gsap.fromTo("#popup_spring",1,{y:610},{y:0});
+        container.classList.add("transparent");
+        container.classList.add("transparent");
         popup_spring.style.display = "flex";
         look3.style.display = "flex";
         lookNum=3;
@@ -138,6 +144,7 @@ wagashi5.onclick = function() {
         look5.style.display="none";
         look6.style.display="none";
         gsap.fromTo("#popup_spring",1,{y:610},{y:0});
+        container.classList.add("transparent");
         popup_spring.style.display = "flex";
         look5.style.display = "flex";
         lookNum=5;
@@ -153,6 +160,7 @@ wagashi6.onclick = function() {
         look5.style.display="none";
         look6.style.display="none";
         gsap.fromTo("#popup_spring",1,{y:610},{y:0});
+        container.classList.add("transparent");
         popup_spring.style.display = "flex";
         look4.style.display = "flex";
         lookNum=4;
@@ -227,7 +235,7 @@ $(document).ready(function () {
     $("#btn_close").on('click',function () {
         if(clickstate==1){
             $('#popup_spring').fadeOut(300);
-            
+            container.classList.remove("transparent");
             clickstate=0;
         };
         
@@ -237,14 +245,7 @@ $(document).ready(function () {
 
 
 function navigateToMainPage() {
-    // 添加一个 CSS 类，以触发淡出过渡效果
-    document.body.classList.add('fade-out');
-
-    // 在过渡结束后，页面导航到 spring.html
-    setTimeout(function() {
-        // window.location.href = "spring.html";
-        window.open("index.html", "_blank");
-    }, 500); // 500 毫秒是过渡效果的时间
+    window.open("index.html", "_blank"); 
 }
 
 let menutoprect=document.querySelector("#menutoprect");

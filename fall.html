@@ -13,8 +13,32 @@
 </head>
 <body>
     <div class="container container-fall">
-        <div class="btn btn_back">返回箭頭</div>
-        <div class="btn btn_hamburger">選單漢堡</div>        
+        <div class="btn btn_back" id="btn_back" onclick="navigateToMainPage()" target="_blank"></div>
+        <div class="menu">
+            <div class="btn_menu mt fall" id="menutoprect">MENU</div>
+            <div class="menu_window" >
+                <div class="menu_windowcontent" id="menu_windowcontent">
+                    <div id="link1" class="pagelink">
+                        <a href="main.html">四季菓子</a>
+                    </div>
+                    <div id="link2" class="pagelink">
+                        <a href="jargon.html" target="_blank">專業名詞解說</a>
+                    </div>
+                    <div id="link3" class="pagelink">
+                        <a href="otherwagashi.html" target="_blank">其他菓子介紹</a>
+                    </div>
+                    <div id="link4" class="pagelink">
+                        <a href="wagashimaking.html" target="_blank">菓子靈製作</a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="btn_menu mb fall" id="btn_menumb"></div>
+            
+            
+            
+        </div>        
             <div class="content-area content-area-fall">
                 <div class="introduction-area">
                     <h1>秋</h1>
@@ -26,15 +50,15 @@
             </div>
             <div class="wagashi-area">
                 <div class="wagashi-area_line1">
-                    <img src="image/fall/f1.png" alt="" class="image_wagashi_fall image_wagashi_i1">
-                    <img src="image/fall/f2.png" alt="" class="image_wagashi_fall image_wagashi_i2">
+                    <img src="image/fall/f1.png" alt="" class="image_wagashi_fall image_wagashi_i1 small">
+                    <img src="image/fall/f2.png" alt="" class="image_wagashi_fall image_wagashi_i2 medium">
                 </div>
                 <div class="wagashi-area_line2"> <!--包含和菓子與說明文字在同一行-->
-                    <img src="image/fall/f3.png" alt="" class="image_wagashi_fall image_wagashi_i3">
+                    <img src="image/fall/f3.png" alt="" class="image_wagashi_fall image_wagashi_i3 small">
                     <img src="image/fall/f4.png" alt="" class="image_wagashi_fall image_wagashi_i4">
                 </div>
                 <div class="wagashi-area_line3">
-                    <img src="image/fall/f5.png" alt="" class="image_wagashi_fall image_wagashi_i5">
+                    <img src="image/fall/f5.png" alt="" class="image_wagashi_fall image_wagashi_i5 medium">
                     <img src="image/fall/f6.png" alt="" class="image_wagashi_fall image_wagashi_i6">
                 </div> 
             </div>
@@ -56,5 +80,6 @@
 
     </div>
     <script src="js/fall-animation.js"></script>
+    <script src="js/vendor/gsap.min.js" charset="UTF-8"></script>
 </body>
 </html>
