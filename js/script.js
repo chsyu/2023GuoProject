@@ -128,7 +128,49 @@ $('#winter').on('mouseenter',function () {
     openingwinterAnim.pause();
 });
 
+gsap.registerPlugin(ScrollTrigger);
+// doors
+ // Register Pin Page
+ let firstscene =document.querySelector("#firstscene");
+ let doors =document.querySelector("#doors");
+    // set GSAP Timeline with Pin
+    ScrollTrigger.create({
+        trigger: "#firstscene",
+        start: "top top",
+        pin: true,
+        pinSpacing: false,
+      }); 
 
+
+      let timeLine_doorsopen = new gsap.timeline({
+        scrollTrigger: {
+          trigger: "#doors",
+          yoyo: true,
+          pin: true, // pin the trigger element while active
+        //   pinSpacing: false,
+          start: "top bottom", // when the top of the trigger hits the top of the viewport
+          end: "0%", // end after scrolling 500px beyond the start
+          scrub: true,
+          markers: true,
+          id: "doors",
+        },
+      });
+
+      timeLine_doorsopen.to("#leftdoor", 1, { x: -($(window).width() - $("#leftdoor").width()) }, 0);
+      let timeLine_doorsclose = new gsap.timeline({
+        scrollTrigger: {
+          trigger: "#secondscne",
+          yoyo: true,
+          pin: true, // pin the trigger element while active
+        //   pinSpacing: false,
+          start: "bottom top", // when the top of the trigger hits the top of the viewport
+          end: "0%", // end after scrolling 500px beyond the start
+          scrub: true,
+          markers: true,
+          id: "doors",
+        },
+      });
+      timeLine_doorsclose.to("#leftdoor", 1, { x: $(window).width() - $("#leftdoor").width() }, 0);
 
 });
 
@@ -147,4 +189,6 @@ $('#menutoprect').on('click',function () {
         isMenuClick = false;        
     }
 });
+
+
 
