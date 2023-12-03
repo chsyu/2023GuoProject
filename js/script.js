@@ -216,10 +216,11 @@ $(document).ready(function(){
     .to("#history2", 1, { opacity: 1 ,ease: "power4.out"})
     .to("#history2", 1, { y:0},0)
     .to("#gap" , 1, {opacity: 2})
+    
 });
 
 
-
+// .to("#jyounama",1,{opacity:0})
 
 
 

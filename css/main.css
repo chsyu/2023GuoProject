@@ -1,6 +1,29 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
-/* font */
+  @font-face {
+    font-family: SweiGothicLegCJKtc-Regular;
+    src: url(../font/swei-gothic-leg-master/WebFont/CJK%20TC/SweiGothicLegCJKtc-Regular.woff2) format("woff2")
+    , url(../font/swei-gothic-leg-master/WebFont/CJK%20TC/SweiGothicLegCJKtc-Regular.woff) format("woff");
+}
+@font-face {
+    font-family: SweiGothicLegCJKtc-Medium;
+    src: url(../font/swei-gothic-leg-master/WebFont/CJK%20TC/SweiGothicLegCJKtc-Medium.woff2) format("woff2")
+    , url(../font/swei-gothic-leg-master/WebFont/CJK%20TC/SweiGothicLegCJKtc-Medium.woff) format("woff");
+}
+@font-face {
+    font-family: SweiGothicLegCJKtc-Light;
+    src: url(../font/swei-gothic-leg-master/WebFont/CJK%20TC/SweiGothicLegCJKtc-Light.woff2) format("woff2")
+    , url(../font/swei-gothic-leg-master/WebFont/CJK%20TC/SweiGothicLegCJKtc-Light.woff) format("woff");
+  }
+  @font-face {
+    font-family: SweiGothicLegCJKtc-Thin;
+    src: url(../font/swei-gothic-leg-master/WebFont/CJK%20TC/SweiGothicLegCJKtc-Light.woff2) format("woff2")
+    , url(../font/swei-gothic-leg-master/WebFont/CJK%20TC/SweiGothicLegCJKtc-Light.woff) format("woff");
+  }
+
+  /* font */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -430,7 +453,7 @@ a:active {
     /* background-color: #ffd7aa; */
     background-image: url(../image/門.png);
     background-size: cover;
-    background-position: center center;
+    background-position: right center;
     /* background-image: url(../image/背景1.png);
     background-size: cover;
     background-position: center center; */
@@ -442,7 +465,21 @@ a:active {
 }
 .door.right {
     background-image: url(../image/門2.png);
+    background-position: left center;
 }
+.logoabovedoors {
+    width: 80px;
+    height: 500px;
+    background-image: url(../image/季彩字標註版.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 30%;
+    margin-right: 10%;
+}
+
 
 .insidedoors {
     height: 100vh;
@@ -457,9 +494,14 @@ a:active {
 
 .history {
     position: absolute;
-    top: 35%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 1rem;
+    line-height: 200%;
+    font-family: SweiGothicLegCJKtc-Regular;
+    color: #553d38;
     text-align: center;
     
 }
