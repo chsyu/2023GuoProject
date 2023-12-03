@@ -1,21 +1,22 @@
 window.onload = function() {
-    // 添加一个 CSS 类，以触发淡出和平移效果
-    document.body.classList.add('fade-in');
+    // // 添加一个 CSS 类，以触发淡出和平移效果
+    // document.body.classList.add('fade-in');
 
-    // 获取元素
-    var wagashiImages = document.querySelectorAll('.maincotent');
+    // // 获取元素
+    // var wagashiImages = document.querySelectorAll('.maincotent');
 
-    // 执行平移效果
-    setTimeout(function() {
-        wagashiImages.forEach(function(image) {
-            image.style.marginBottom = '-50px';
-        });
-    }, 500); // 500 毫秒是淡出效果的时间
+    // // 执行平移效果
+    // setTimeout(function() {
+    //     wagashiImages.forEach(function(image) {
+    //         image.style.marginBottom = '-50px';
+    //     });
+    // }, 500); // 500 毫秒是淡出效果的时间
 
-    // 过渡结束后，移除动画类
-    setTimeout(function() {
-        document.body.classList.remove('fade-out');
-    }, 1000); // 1000 毫秒是淡出和平移效果的总时间
+    // // 过渡结束后，移除动画类
+    // setTimeout(function() {
+    //     document.body.classList.remove('fade-out');
+    // }, 1000); // 1000 毫秒是淡出和平移效果的总时间
+    
 }
 
 function navigateToSpringPage() {
@@ -59,6 +60,8 @@ function navigateToWinterPage() {
         window.open("winter.html", "_blank");
     }, 500); // 500 毫秒是过渡效果的时间
 }
+
+
 
 // four seasons animation
 $(document).ready(function () {
@@ -128,51 +131,98 @@ $('#winter').on('mouseenter',function () {
     openingwinterAnim.pause();
 });
 
-gsap.registerPlugin(ScrollTrigger);
-// doors
- // Register Pin Page
- let firstscene =document.querySelector("#firstscene");
- let doors =document.querySelector("#doors");
-    // set GSAP Timeline with Pin
-    ScrollTrigger.create({
-        trigger: "#firstscene",
-        start: "top top",
-        pin: true,
-        pinSpacing: false,
-      }); 
-
-
-      let timeLine_doorsopen = new gsap.timeline({
-        scrollTrigger: {
-          trigger: "#doors",
-          yoyo: true,
-          pin: true, // pin the trigger element while active
-        //   pinSpacing: false,
-          start: "top bottom", // when the top of the trigger hits the top of the viewport
-          end: "0%", // end after scrolling 500px beyond the start
-          scrub: true,
-          markers: true,
-          id: "doors",
-        },
-      });
-
-      timeLine_doorsopen.to("#leftdoor", 1, { x: -($(window).width() - $("#leftdoor").width()) }, 0);
-      let timeLine_doorsclose = new gsap.timeline({
-        scrollTrigger: {
-          trigger: "#secondscne",
-          yoyo: true,
-          pin: true, // pin the trigger element while active
-        //   pinSpacing: false,
-          start: "bottom top", // when the top of the trigger hits the top of the viewport
-          end: "0%", // end after scrolling 500px beyond the start
-          scrub: true,
-          markers: true,
-          id: "doors",
-        },
-      });
-      timeLine_doorsclose.to("#leftdoor", 1, { x: $(window).width() - $("#leftdoor").width() }, 0);
+   
 
 });
+
+
+$(document).ready(function(){
+    gsap.registerPlugin(ScrollTrigger);
+    // doors
+     // Register Pin Page
+    
+          let timeLine_doorsopen = gsap.timeline({
+            scrollTrigger: {
+              trigger: "#doors",
+              yoyo: true,
+              pin: true, // pin the trigger element while active
+            //   pinSpacing: false,
+              start: "top top", // when the top of the trigger hits the top of the viewport
+              end: "100%", // end after scrolling 500px beyond the start
+              scrub: true,
+              markers: true,
+              id: "doors",
+            },
+          });
+          
+           // gsap.set("#block", {x: -$("#block").width()});
+      gsap.set("#history", {opacity: 0});
+      gsap.set("#history", {y:100});
+      gsap.set("block-l", {x:0});
+      gsap.set("block-r", {x:0});
+      // gsap.set("#block-r", {x: $("#block-r").width()});
+      timeLine_doorsopen
+        // .to("#block", 2, { backgroundColor: "red" })
+        .fromTo("#block-l", 1,{x:0},{ x:- $("#block-l").width() +200,ease: "power4.out"})
+        .fromTo("#block-r", 1, {x:0},{ x:$("#block-r").width() -200,ease: "power4.out"}, 0)
+        .to("#history", 3, { opacity: 1 ,ease: "power4.out"})
+        .to("#history", 3, { y:0 },0)
+        // .fromTo("#block-l",1,{x:- $("#block-l").width() +200},{x:0})
+        // .fromTo("#block-r",1,{ x:$("#block-r").width() -200},{x:0})
+        
+
+
+        let timeLine_doorsclose = gsap.timeline({
+            scrollTrigger: {
+              trigger: "#doors2",
+              yoyo: true,
+              pin: true, // pin the trigger element while active
+            //   pinSpacing: false,
+              start: "top top", // when the top of the trigger hits the top of the viewport
+              end: "50%", // end after scrolling 500px beyond the start
+              scrub: true,
+            //   markers: true,
+              id: "doors2",
+            },
+          });
+    timeLine_doorsclose
+    .fromTo("#block-l2", 1, { x:- $("#block-l").width() +200},{ x:  - $("#block-l").width(),ease: "power4.out"})
+    .fromTo("#block-r2", 1, {x:$("#block-r").width() -200},{ x:  $("#block-r").width(),ease: "power4.out"},0)
+    .to("#gradient",3,{opacity:0})
+          
+    let timeLine_scene2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#door2",
+          yoyo: true,
+          pin: true, // 沒作用
+        //   pinSpacing: false,
+          start: "top top", // when the top of the trigger hits the top of the viewport
+          end: "100%", // end after scrolling 500px beyond the start
+          scrub: true,
+          markers: true,
+          id: "doors2",
+        },
+      });
+      
+       // gsap.set("#block", {x: -$("#block").width()});
+  gsap.set("#history2", {opacity: 0});
+  gsap.set("#history2", {y:100});
+  gsap.set("#block-l2", {x:-300});
+  gsap.set("#block-r2", {x:-300});
+  gsap.set("#gap",{opacity:0});
+  // gsap.set("#block-r", {x: $("#block-r").width()});
+  timeLine_scene2
+    // .to("#block", 2, { backgroundColor: "red" })
+    .to("#history2", 1, { opacity: 1 ,ease: "power4.out"})
+    .to("#history2", 1, { y:0},0)
+    .to("#gap" , 1, {opacity: 2})
+});
+
+
+
+
+
+
 
 // menu animation
 let menu_windowcontent = document.querySelector("#menu_windowcontent");

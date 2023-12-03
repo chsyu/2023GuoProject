@@ -13,7 +13,7 @@
     
 </head>
 <body>
-    <div class="container container-winter">
+    <div class="container container-winter" id="container">
         <div class="btn btn_back" id="btn_back" onclick="navigateToMainPage()" target="_blank"></div>
         <div class="menu">
             <div class="btn_menu mt winter" id="menutoprect">MENU</div>
@@ -46,43 +46,280 @@
                 <h1>冬</h1>
                 <h3 class="h3-winter">ふゆの上生菓子</h3>
                 <div class="introduction-content">
-                    <p>春の和菓子には、見た目にも美しい華やかな和菓子が多く、春の訪れを感じさせてくれるものが多いです。因此經常使用桜や梅、苺、柚子、あんず等材料。また、求肥や白玉粉、小豆や栗などもよく使用されます。</p>
+                    <p>從年底到年初，隨著賀年禮、年末年始的聚會等機會增多，匠人製作出蘊含季節風情、傳統活動和人們心願的日本傳統「和菓子」，在團聚的日子增添美味。</p>
                 </div>
             </div>
         </div>
         <div class="wagashi-area">
             <div class="wagashi-area_line1">
-                <img src="image/winter/w1.png" alt="" class="image_wagashi_winter image_wagashi_i1 small">
-                <img src="image/winter/w2.png" alt="" class="image_wagashi_winter image_wagashi_i2 small">
+                <img src="image/winter/w1.png" alt="" class="image_wagashi_winter image_wagashi_i1 small"
+                id="wagashi_w1">
+                <img src="image/winter/w2.png" alt="" class="image_wagashi_winter image_wagashi_i2 small"  id="wagashi_w2">
             </div>
             <div class="wagashi-area_line2"> <!--包含和菓子與說明文字在同一行-->
-                <img src="image/winter/w3.png" alt="" class="image_wagashi_winter image_wagashi_i3 small">
-                <img src="image/winter/w4.png" alt="" class="image_wagashi_winter image_wagashi_i4 medium">
+                <img src="image/winter/w3.png" alt="" class="image_wagashi_winter image_wagashi_i3 small"  id="wagashi_w3">
+                <img src="image/winter/w4.png" alt="" class="image_wagashi_winter image_wagashi_i4 medium"  id="wagashi_w4">
             </div>
             <div class="wagashi-area_line3">
-                <img src="image/winter/w5.png" alt="" class="image_wagashi_winter image_wagashi_i5">
-                <img src="image/winter/w6.png" alt="" class="image_wagashi_winter image_wagashi_i6 medium">
+                <img src="image/winter/w5.png" alt="" class="image_wagashi_winter image_wagashi_i5" id="wagashi_w5">
+                <img src="image/winter/w6.png" alt="" class="image_wagashi_winter image_wagashi_i6 medium" id="wagashi_w6">
             </div> 
         </div>            
-            
-            
-        
-          
-                
-                
-               
-            
-            
-            
-            
-            
-
-
-        
 
     </div>
+
+    <!--popup-->
+    <div class="popup popup_winter" id="popup_winter">
+        <div class="btn left" id="btn_left">
+            <img src="./image/btn-left.png" alt="" class="btnimage">
+        </div>
+         <!--第一個內容-->
+        <div class="popup_contentarea winter"  id="look1">
+            <!-- <div class="popup_contentarea"></div> -->
+           <div class="popup_left">
+                <img src="image/winter/w1.png" alt="" class="popup_img winter small">
+                <div class="kamei">
+                    <div class="kamei_line winter"></div>
+                    <h1 class="kamei winter">椿</h1>
+                    <div class="kamei_line winter"></div>
+                </div>
+                <h3 class="h3-winter sub">つばき</h3>
+                <p class="intro winter">鮮紅的花瓣綻放在白茫之中，<br>為冬日的庭院增添色彩，<br>是冬季的時令和菓子。</p>
+                <!-- text-align:justify 沒反應 -->
+           </div> 
+           <div class="popup_right">
+                <div class="rightarea_content">
+                    <h3 class="h3-winter rightarea_title winter">立冬</h3>
+                    <div class="intro content winter">冬日之始、<br>山茶始開，<br>沒有陽光的照拂時能夠感受到絲絲寒意。</div>
+                </div>
+                <div class="kamei_line winter underrightareacontent"></div>
+                <div class="rightarea_content">
+                    <h3 class="h3-winter rightarea_title winter">材料</h3>
+                    <div class="intro content winter">各色練切、紅豆沙餡</div>
+                </div>
+                <div class="kamei_line winter underrightareacontent"></div>
+                <div class="rightarea_content tipsarea">
+                    <div class="rightarea_content">
+                        <h3 class="h3-winter rightarea_title winter">小知識</h3>
+                        <div class="tips">
+                            <h4 class="h4 winter">椿花的季節</h4>
+                            <div class="intro tips_content winter">又稱為山茶花，主要花季為11月至4月。依品種分別在不同時節綻放。也有一些早在9月左右就開花的品種。雖然椿的名字裡有「春」，但它不僅在春季，還能從晚秋一直綻放。椿花是一種花期非常長的花木，為寒冷的冬季庭院增添色彩。</div>
+                        </div>
+                        
+                    </div>
+                </div>
+           </div>
+
+
+        </div>
+         <!--第二個內容-->
+        <div class="popup_contentarea winter" id="look2">
+            <div class="popup_left">
+                 <img src="image/winter/w2.png" alt="" class="popup_img winter small">
+                 <div class="kamei">
+                     <div class="kamei_line winter"></div>
+                     <h1 class="kamei winter">雪之華</h1>
+                     <div class="kamei_line winter"></div>
+                 </div>
+                 <h3 class="h3-winter sub">雪の華</h3>
+                 <p class="intro winter">在純白色的薯蕷饅頭上撒上冰餅製成的雪花，<br>表現出雪花结晶的晶瑩模樣，<br>包覆著滿滿的紅豆餡，頗有冬天的味道。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-winter rightarea_title winter">小雪</h3>
+                     <div class="intro content winter">雪花初落、<br>虹藏不見，<br>是天氣常陰而未積雪的季節。</div>
+                 </div>
+                 <div class="kamei_line winter underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-winter rightarea_title winter">材料</h3>
+                     <div class="intro content winter">薯蕷饅頭、冰餅、紅豆泥</div>
+                 </div>
+                 <div class="kamei_line winter underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-winter rightarea_title winter">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 winter">冰餅是什麼?</h4>
+                             <div class="intro winter tips_content">是信州地區嚴寒中誕生的傳統天然食品。將糯米糕切成長條用和紙包裹，並用草繩或塑膠繩綁起，在水中浸泡兩到三天後讓冬季的寒風風乾。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+          <!--第三個內容-->
+        <div class="popup_contentarea winter" id="look3">
+            <div class="popup_left">
+                 <img src="image/winter/w4.png" alt="" class="popup_img winter medium">
+                 <div class="kamei">
+                     <div class="kamei_line winter"></div>
+                     <h1 class="kamei winter">一陽來復</h1>
+                     <div class="kamei_line winter"></div>
+                 </div>
+                 <h3 class="h3-winter sub">いちようらいふく</h3>
+                 <p class="intro winter">藍色的陰與黃色的陽交融，象徵苦盡甘來、<br>冬至那最長的夜過去後，太陽將再次升起。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-winter rightarea_title winter">冬至</h3>
+                     <div class="intro content winter">晝短夜長、<br>陰極最盛，<br>萬物休養進補，恢復生息準備迎接新的一年。</div>
+                 </div>
+                 <div class="kamei_line winter underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-winter rightarea_title winter">材料</h3>
+                     <div class="intro content winter">こなし、小豆豆沙</div>
+                 </div>
+                 <div class="kamei_line winter underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-winter rightarea_title winter">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 winter">日本的冬至習俗</h4>
+                             <div class="intro tips_content winter">在台灣，我們會吃湯圓來慶祝冬至，而日本人則是在這天會泡柚子浴的習慣。柚子的香氣與藥效相傳有避邪的作用，而柚子的日文發音也與腦子靈活的日文「通融」相似，因此也有祈求「身體健康、頭腦靈活」的意義。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+           <!--第四個內容-->
+        <div class="popup_contentarea winter" id="look4">
+            <div class="popup_left">
+                 <img src="image/winter/w6.png" alt="" class="popup_img winter small">
+                 <div class="kamei">
+                     <div class="kamei_line winter"></div>
+                     <h1 class="kamei winter">福梅</h1>
+                     <div class="kamei_line winter"></div>
+                 </div>
+                 <h3 class="h3-winter sub">ふくうめ</h3>
+                 <p class="intro winter">梅花被稱為「百花之魁」，<br>在凜冬之中挺拔的花姿和高貴的香氣令人著迷，<br>也經常被當作和菓子的主題意象。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-winter rightarea_title winter">大寒</h3>
+                     <div class="intro content winter">年中最寒、<br>冬凜迎春，<br>一年最寒冷的天氣中，大地開始慢慢走向春天。</div>
+                 </div>
+                 <div class="kamei_line winter underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-winter rightarea_title winter">材料</h3>
+                     <div class="intro content winter">各色外郎糕或各色練切、白餡(白豆沙)</div>
+                 </div>
+                 <div class="kamei_line winter underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-winter rightarea_title winter">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 winter">春之七草</h4>
+                             <div class="intro tips_content winter">春之七草是指水芹、薺菜、鼠曲草、繁縷、寶蓋草、蕪菁、白蘿蔔這七種植物。與秋之七草的觀賞性不同，春之七草適合入菜，並有各自的功效。經常會製成七草粥，用來怯病息災、調理腸胃，通常在正月食用。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+           <!--第五個內容-->
+        <div class="popup_contentarea winter" id="look5">
+            <div class="popup_left">
+                 <img src="image/winter/w5.png" alt="" class="popup_img winter">
+                 <div class="kamei">
+                     <div class="kamei_line winter"></div>
+                     <h1 class="kamei winter">花瓣餅</h1>
+                     <div class="kamei_line winter"></div>
+                 </div>
+                 <h3 class="h3-winter sub">花びら餅</h3>
+                 <p class="intro winter">具有雅致甜味、帶有吉祥意味的正月和菓子。<br>中間使用的牛蒡，因其在土壤中扎根牢固，<br>有象徵「堅實的家的基礎」和祈求長壽的寓意。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-winter rightarea_title winter">小寒</h3>
+                     <div class="intro content winter">天氣漸寒、<br>尚未大冷，<br>從小寒到節分的這三十天被稱為"寒之內"。</div>
+                 </div>
+                 <div class="kamei_line winter underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-winter rightarea_title winter">材料</h3>
+                     <div class="intro content winter">各色練切</div>
+                 </div>
+                 <div class="kamei_line winter underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-winter rightarea_title winter">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 winter">正月的料理</h4>
+                             <div class="intro tips_content winter">為了迎接神明的到來，在除夕當天會把新年頭三天的食物準備好，避免驚擾到年神，稱為「御節料理」。除了豪華的御節料理之外，在享用御節料理前會喝屠蘇酒祈求長壽，也會食用雜煮，祈求一年的平安。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+           <!--第六個內容-->
+        <div class="popup_contentarea winter" id="look6">
+            <div class="popup_left">
+                 <img src="image/winter/w3.png" alt="" class="popup_img winter small">
+                 <div class="kamei">
+                     <div class="kamei_line winter"></div>
+                     <h1 class="kamei winter">雪人</h1>
+                     <div class="kamei_line winter"></div>
+                 </div>
+                 <h3 class="h3-winter sub">ゆきだるま</h3>
+                 <p class="intro winter">可愛的雪人造型有別於一般雅致的和菓子，<br>是符合現代聖誕節氣息的節日和菓子。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-winter rightarea_title winter">大雪</h3>
+                     <div class="intro content winter">閉塞成冬、<br>過於小雪，<br>萬物生靈進入冬眠，真正的冬天到来。</div>
+                 </div>
+                 <div class="kamei_line winter underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-winter rightarea_title winter">材料</h3>
+                     <div class="intro content winter">手亡豆(白色四季豆)、白腰豆、糯米粉、寒天、冰餅、柚子餡</div>
+                 </div>
+                 <div class="kamei_line winter underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-winter rightarea_title winter">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 winter">雪的各種名稱</h4>
+                             <div class="intro tips_content winter">雪根據不同的觸感、模樣也有不同詩情畫意的名稱，例如:
+                                <br>· 牡丹雪：向牡丹花瓣一樣比較大片的雪花。
+                                <br>· 風花：風吹拂而來的白色清雪，像一朵朵小花在空中飛舞。形容山上的積雪被風吹起的模樣。
+                                <br>· 垂雪：從樹枝上落下的雪，落地時通常會發出「砰」的一聲。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+        <div class="btn right" id="btn_right">
+            <img src="./image/btn-right.png" alt="" class="btnimage">
+        </div>
+        <div class="btn close" id="btn_close">
+            <img src="./image/close(pur).png" alt="" class="btnimage close">
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery-3.4.1.min.js"></script>
     <script src="js/vendor/gsap.min.js"  charset="UTF-8"></script>
     <script src="js/winter-animation.js"></script>
-    <script src="js/vendor/jquery-3.4.1.min.js"></script>
 </body>
 </html>

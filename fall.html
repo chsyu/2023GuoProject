@@ -12,7 +12,7 @@
     
 </head>
 <body>
-    <div class="container container-fall">
+    <div class="container container-fall" id="container">
         <div class="btn btn_back" id="btn_back" onclick="navigateToMainPage()" target="_blank"></div>
         <div class="menu">
             <div class="btn_menu mt fall" id="menutoprect">MENU</div>
@@ -44,42 +44,277 @@
                     <h1>秋</h1>
                     <h3 class="h3-fall">あきの上生菓子</h3>
                     <div class="introduction-content">
-                        <p>春の和菓子には、見た目にも美しい華やかな和菓子が多く、春の訪れを感じさせてくれるものが多いです。因此經常使用桜や梅、苺、柚子、あんず等材料。また、求肥や白玉粉、小豆や栗などもよく使用されます。</p>
+                        <p>秋季，是作物豐收、傳統節日眾多的季節，和菓子匠人會使用像栗子和芋頭這樣「當令」食材來描繪秋日風景，也會將傳統意象融入和菓子中，製成應景的美味點心。</p>
                     </div>
                 </div>
             </div>
             <div class="wagashi-area">
                 <div class="wagashi-area_line1">
-                    <img src="image/fall/f1.png" alt="" class="image_wagashi_fall image_wagashi_i1 small">
-                    <img src="image/fall/f2.png" alt="" class="image_wagashi_fall image_wagashi_i2 medium">
+                    <img src="image/fall/f1.png" alt="" class="image_wagashi_fall image_wagashi_i1 small" id="wagashi_f1">
+                    <img src="image/fall/f2.png" alt="" class="image_wagashi_fall image_wagashi_i2 medium" id="wagashi_f2">
                 </div>
                 <div class="wagashi-area_line2"> <!--包含和菓子與說明文字在同一行-->
-                    <img src="image/fall/f3.png" alt="" class="image_wagashi_fall image_wagashi_i3 small">
-                    <img src="image/fall/f4.png" alt="" class="image_wagashi_fall image_wagashi_i4">
+                    <img src="image/fall/f3.png" alt="" class="image_wagashi_fall image_wagashi_i3 small" id="wagashi_f3">
+                    <img src="image/fall/f4.png" alt="" class="image_wagashi_fall image_wagashi_i4" id="wagashi_f4">
                 </div>
                 <div class="wagashi-area_line3">
-                    <img src="image/fall/f5.png" alt="" class="image_wagashi_fall image_wagashi_i5 medium">
-                    <img src="image/fall/f6.png" alt="" class="image_wagashi_fall image_wagashi_i6">
+                    <img src="image/fall/f5.png" alt="" class="image_wagashi_fall image_wagashi_i5 medium" id="wagashi_f5">
+                    <img src="image/fall/f6.png" alt="" class="image_wagashi_fall image_wagashi_i6" id="wagashi_f6">
                 </div> 
             </div>
-            
-            
-        
-          
-                
-                
-               
-            
-            
-            
-            
-            
 
-
-        
 
     </div>
-    <script src="js/fall-animation.js"></script>
+
+    <!--popup-->
+    <div class="popup popup_fall" id="popup_fall">
+        <div class="btn left" id="btn_left">
+            <img src="./image/btn-left.png" alt="" class="btnimage">
+        </div>
+         <!--第一個內容-->
+        <div class="popup_contentarea fall"  id="look1">
+            <!-- <div class="popup_contentarea"></div> -->
+           <div class="popup_left">
+                <img src="image/fall/f1.png" alt="" class="popup_img fall small">
+                <div class="kamei">
+                    <div class="kamei_line fall"></div>
+                    <h1 class="kamei fall">鬼燈</h1>
+                    <div class="kamei_line fall"></div>
+                </div>
+                <h3 class="h3-fall sub">ほおずき</h3>
+                <p class="intro fall">用外郎糕形塑出小燈籠般的鬼燈草，<br>是照亮迎接返鄉的祖先腳下的提燈，<br>也是指引家的位置的燈光。</p>
+                <!-- text-align:justify 沒反應 -->
+           </div> 
+           <div class="popup_right">
+                <div class="rightarea_content">
+                    <h3 class="h3-fall rightarea_title fall">立秋</h3>
+                    <div class="intro content fall">夏去秋來，<br>陽收陰長，<br>一天落雨一天涼。</div>
+                </div>
+                <div class="kamei_line fall underrightareacontent"></div>
+                <div class="rightarea_content">
+                    <h3 class="h3-fall rightarea_title fall">材料</h3>
+                    <div class="intro content fall">外郎糕、白餡(白豆沙)</div>
+                </div>
+                <div class="kamei_line fall underrightareacontent"></div>
+                <div class="rightarea_content tipsarea">
+                    <div class="rightarea_content">
+                        <h3 class="h3-fall rightarea_title fall">小知識</h3>
+                        <div class="tips">
+                            <h4 class="h4 fall">日本的盂蘭盆節</h4>
+                            <div class="intro tips_content fall">類似於台灣的清明節，人們在這天掃墓、迎接祖先的亡靈，是追悼亡者的日子。同時也是僅次於元旦的重要節日，在日本會有一個禮拜的連休假期，稱為盆休。</div>
+                        </div>
+                        
+                    </div>
+                </div>
+           </div>
+
+
+        </div>
+         <!--第二個內容-->
+        <div class="popup_contentarea fall" id="look2">
+            <div class="popup_left">
+                 <img src="image/fall/f2.png" alt="" class="popup_img fall medium">
+                 <div class="kamei">
+                     <div class="kamei_line fall"></div>
+                     <h1 class="kamei fall">桔梗</h1>
+                     <div class="kamei_line fall"></div>
+                 </div>
+                 <h3 class="h3-fall sub">ききょう</h3>
+                 <p class="intro fall">日本「秋之七草」之一的桔梗花，<br>和春天的姹紫嫣紅不同，<br>秋天的花草們在涼爽的夜晚靜靜的綻放。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-fall rightarea_title fall">處暑</h3>
+                     <div class="intro content fall">暑氣退却、<br>炎夏已止，<br>天氣開始漸漸轉涼。</div>
+                 </div>
+                 <div class="kamei_line fall underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-fall rightarea_title fall">材料</h3>
+                     <div class="intro content fall">練切・小豆豆沙</div>
+                 </div>
+                 <div class="kamei_line fall underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-fall rightarea_title fall">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 fall">秋之七草</h4>
+                             <div class="intro fall tips_content">秋之七草是指荻花(胡枝子)、桔梗、葛藤花、澤蘭、女蘿花、狗尾草、撫子(瞿麥花)這七種植物，秋之七草使人看了賞心悅目，因而自然成為詩人創作的靈感。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+          <!--第三個內容-->
+        <div class="popup_contentarea fall" id="look3">
+            <div class="popup_left">
+                 <img src="image/fall/f4.png" alt="" class="popup_img fall">
+                 <div class="kamei">
+                     <div class="kamei_line fall"></div>
+                     <h1 class="kamei fall">栗子銅鑼燒</h1>
+                     <div class="kamei_line fall"></div>
+                 </div>
+                 <h3 class="h3-fall sub">栗どら焼き</h3>
+                 <p class="intro fall">以栗子きんとん為基底，加入鮮奶油和蛋黃，<br>經心炊煮成柔順的栗子內餡，夾心在鬆軟的餅皮之中，<br>一口咬下就是滿滿的秋日氣息。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-fall rightarea_title fall">秋分</h3>
+                     <div class="intro content fall">晝夜均分，雷使收聲，<br>蟄蟲伏居，水也乾涸，<br>氣候開始轉冷。</div>
+                 </div>
+                 <div class="kamei_line fall underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-fall rightarea_title fall">材料</h3>
+                     <div class="intro content fall">砂糖、栗子、雞蛋、小麥粉、鮮奶油</div>
+                 </div>
+                 <div class="kamei_line fall underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-fall rightarea_title fall">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 fall">日本的秋季果實</h4>
+                             <div class="intro tips_content fall">日本的秋季盛產各類樹果，包含栗子、橡樹果、楢樹果、華南錐的果實等等。並且經常利用栗子製作各項甜品，也會加入米飯中製成「栗御飯」。孩子們也會在公園中撿樹果製成玩具或拿回家料理。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+           <!--第四個內容-->
+        <div class="popup_contentarea fall" id="look4">
+            <div class="popup_left">
+                 <img src="image/fall/f6.png" alt="" class="popup_img fall medium">
+                 <div class="kamei">
+                     <div class="kamei_line fall"></div>
+                     <h1 class="kamei fall">錦秋</h1>
+                     <div class="kamei_line fall"></div>
+                 </div>
+                 <h3 class="h3-fall sub">きんしゅう</h3>
+                 <p class="intro fall">用針箸技術剪出栩栩如生的楓葉，<br>如同秋日山林裡的樹葉凋落前<br>展示著最錦繡華麗的演出。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-fall rightarea_title fall">霜降</h3>
+                     <div class="intro content fall">大地生霜、<br>紅葉艷麗，<br>昭示著秋日的尾聲與冬日的序曲即將到來。</div>
+                 </div>
+                 <div class="kamei_line fall underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-spring rightarea_title fall">材料</h3>
+                     <div class="intro content fall">各色練切、金箔</div>
+                 </div>
+                 <div class="kamei_line fall underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-fall rightarea_title fall">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 fall">針箸技術</h4>
+                             <div class="intro tips_content fall">針著，由兩根如筷子般的細針組成。通常用於剪菊技術或細微雕刻，能夠雕出栩栩如生的葉片、花瓣造型。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+           <!--第五個內容-->
+        <div class="popup_contentarea fall" id="look5">
+            <div class="popup_left">
+                 <img src="image/fall/f5.png" alt="" class="popup_img fall medium">
+                 <div class="kamei">
+                     <div class="kamei_line fall"></div>
+                     <h1 class="kamei fall">菊</h1>
+                     <div class="kamei_line fall"></div>
+                 </div>
+                 <h3 class="h3-fall sub">ヘラ菊</h3>
+                 <p class="intro fall">使用各色練切疊加成漸層的美麗色澤，<br>並用三角棒雕出重陽節的菊花綻放的模樣。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-fall rightarea_title fall">寒露</h3>
+                     <div class="intro content fall">夜寒凝露、<br>寒意沁心，<br>北雁也在此時飛來過冬。</div>
+                 </div>
+                 <div class="kamei_line fall underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-fall rightarea_title fall">材料</h3>
+                     <div class="intro content fall">各色練切</div>
+                 </div>
+                 <div class="kamei_line fall underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-fall rightarea_title fall">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 fall">日本的皇室代表花</h4>
+                             <div class="intro tips_content fall">菊花是日本代表秋天的花，明治時期「十六瓣八重菊紋」被指定為皇室紋章。他也是日本護照上的代表花。因此長期以來對於日本人民來說，菊花是一個高貴而特殊的存在。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+           <!--第六個內容-->
+        <div class="popup_contentarea fall" id="look6">
+            <div class="popup_left">
+                 <img src="image/fall/f3.png" alt="" class="popup_img fall">
+                 <div class="kamei">
+                     <div class="kamei_line fall"></div>
+                     <h1 class="kamei fall">蟲之音</h1>
+                     <div class="kamei_line fall"></div>
+                 </div>
+                 <h3 class="h3-fall sub">虫の音</h3>
+                 <p class="intro fall">用淡黃色的練切描繪在清涼的秋夜中，<br>月色下鳴叫的蟲子。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-fall rightarea_title fall">白露</h3>
+                     <div class="intro content fall">寒氣萌生、<br>白露凝結，<br>夜晚及清晨顆顆清透的露珠附著在地面和植物上。</div>
+                 </div>
+                 <div class="kamei_line fall underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-spring rightarea_title fall">材料</h3>
+                     <div class="intro content fall">練切、豆沙、芝麻粒</div>
+                 </div>
+                 <div class="kamei_line fall underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-fall rightarea_title fall">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 fall">什麼是「十五夜」?</h4>
+                             <div class="intro tips_content fall">即日本的中秋節，這天日本人會依一年所見的滿月數量以賞月團子作為象徵供奉神明。而近年來秋天的活動被萬聖節取代，但部分地區仍保有「賞月小偷」—只有在中秋這天允許孩子偷偷拿走供品的有趣習俗。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+        <div class="btn right" id="btn_right">
+            <img src="./image/btn-right.png" alt="" class="btnimage">
+        </div>
+        <div class="btn close" id="btn_close">
+            <img src="./image/close(brown).png" alt="" class="btnimage close">
+        </div>
+    </div>
     <script src="js/vendor/gsap.min.js" charset="UTF-8"></script>
+    <script src="js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="js/fall-animation.js"></script>
+    
 </body>
 </html>

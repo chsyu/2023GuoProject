@@ -62,6 +62,15 @@ h1 {
     justify-content: center;
     color: #9D2929;
 }
+.kamei.summer {
+    color:#299d99;
+}
+.kamei.fall {
+    color:#9d5f29;
+}
+.kamei.winter {
+    color:#93299d;
+}
 .kamei_line {
     /* height: 2px; */
     width: 50px;
@@ -69,7 +78,15 @@ h1 {
     margin: 0 10px;
     border-radius: 10px;
 }
-
+.kamei_line.summer {
+    border: solid 1px #299d99;
+}
+.kamei_line.fall {
+    border: solid 1px #9d5f29;
+}
+.kamei_line.winter {
+    border: solid 1px #93299d;
+}
 /* subtitle */
 h3 {
     font-family: 'Zen Maru Gothic', sans-serif;
@@ -83,10 +100,41 @@ h3 {
 .h3-spring {
     color:#9D2929;
 }
+.h3-summer {
+    color: #1d6c5e;
+}
+.h3-fall {
+    color:#a65930;
+}
+.h3-winter {
+    color:#7c358b;
+}
+
 .h3-spring.sub {
     margin-top: -10px;
     font-size: 1rem;
     word-spacing: 5px;
+}
+.h3-summer.sub {
+    color: #299d99;
+    /* margin-top: -10px; */
+    font-size: 1rem;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+.h3-fall.sub {
+    color: #9d5f29;
+    /* margin-top: -10px; */
+    font-size: 1rem;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+.h3-winter.sub {
+    color: #8a30a6;
+    /* margin-top: -10px; */
+    font-size: 1rem;
+    word-spacing: 5px;
+    letter-spacing: 2px;
 }
 
 
@@ -101,15 +149,14 @@ h3 {
     /* text-align: justify; */
     /* text-justify: auto; */
 }
-
-.h3-summer {
-    color: #216c76;
+.intro.summer {
+    color: #12342f;
 }
-.h3-fall {
-    color:#a65930;
+.intro.fall {
+    color: #342212;
 }
-.h3-winter {
-    color: #572176;
+.intro.winter {
+    color: #2c1234;
 }
 
 h4 {
@@ -119,6 +166,27 @@ h4 {
     font-weight: 700;
     margin: 0;
 
+}
+h4.summer {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #299d99;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+h4.fall {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #a65930;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+h4.winter {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #8a30a6;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
 }
 
 p {
@@ -157,13 +225,19 @@ p {
     background-size: cover;
 }
 .container-summer {
-    background-color: #aee3db;
+    /* background-color: #aee3db; */
+    background-image: url(../image/夏背景.png);
+    background-size: cover;
 }
 .container-fall {
-    background-color: #ffd4a3;
+    /* background-color: #ffd4a3; */
+    background-image: url(../image/秋背景.png);
+    background-size: cover;
 }
 .container-winter {
-    background-color: #c4c6ec;
+    /* background-color: #c4c6ec; */
+    background-image: url(../image/冬背景.png);
+    background-size: cover;
 }
 
 
@@ -187,13 +261,13 @@ p {
 }
 
 .content-area-summer {
-    background-color: #84c9be;
+    background-color: rgba(131, 201, 189,0.8)
 }
 .content-area-fall {
-    background-color: #ebb080;
+    background-color: rgba(235, 201, 127, 0.8)
 }
 .content-area-winter {
-    background-color: #dfcaf4;
+    background-color: rgba(222, 200, 244,0.8)
 }
 
 
@@ -275,7 +349,7 @@ p {
     background-image: url(../image/卷軸綠.png);
 }
 .btn_menu.fall {
-    background-image: url(../image/卷軸橘.png);
+    background-image: url(../image/卷軸黃.png);
 }
 .btn_menu.mt {
     height: 22px;
@@ -309,7 +383,7 @@ p {
     background-image: url(../image/卷軸綠.png);
 }
 .btn_menu.fall {
-    background-image: url(../image/卷軸橘.png);
+    background-image: url(../image/卷軸黃.png);
 }
 .menu_window {
     width: 120px;
@@ -383,6 +457,7 @@ a:active {
 .btn {
     position: absolute;
 }
+
 .btn.left {
     left: 30px;
     padding-left: 50px;
@@ -399,6 +474,7 @@ a:active {
     padding: 0;
 
 }
+
 .btn.close {
     position: absolute;
     top: 40px;
@@ -413,6 +489,12 @@ a:active {
     width: 20px;
     height: 40px;
    
+}
+.btnimage:hover {
+    /* filter: blur(filter: drop-shadow(3px 3px 5px rgba(125, 125, 125, 0.8));); */
+    filter: brightness(0.9);
+    scale: 110%;
+    transition:all 0.5s;
 }
 .btnimage.close {
     width: 20px;
@@ -554,7 +636,7 @@ a:active {
     margin-top: -10px;
     transition:all 0.5s;
     /* opacity: 80%; */
-    filter: drop-shadow(5px 10px 5px rgba(119, 62, 34, 0.5));
+    filter: drop-shadow(5px 10px 5px rgba(82, 34, 119, 0.5));
 }
 .image_wagashi_winter {
     position: relative;
@@ -636,8 +718,8 @@ a:active {
     overflow: hidden;
     justify-content: center;
     /* opacity: 0; */
-
 }
+
 
 
 
@@ -669,18 +751,50 @@ a:active {
     display: none;
 
 }
+.popup_summer {
+    background-color: #299d90;
+    display: none;
+    filter: drop-shadow(5px 10px 5px rgba(34, 112, 119, 0.5));
+
+}
+.popup_fall {
+    background-color: #9d5d29;
+    display: none;
+    filter: drop-shadow(5px 10px 5px rgba(119, 88, 34, 0.5));
+
+}
+.popup_winter {
+    background-color: #6f397a;
+    display: none;
+    filter: drop-shadow(5px 10px 5px rgba(88, 34, 119, 0.5));
+
+}
 
 .popup_contentarea {
-    outline: solid 1px blue;
+    /* outline: solid 1px blue; */
     padding: 0px 90px;
     /* margin-top: 25px; */
     width: 100vw;
     min-height: 450px;
-    background-color: #FFDEDE;
+    
     display: flex;
     /* align-items: center;
     justify-content: center; */
 }
+.popup_contentarea.spring {
+    background-color: #FFDEDE;
+}
+
+.popup_contentarea.summer {
+    background-color: #defffd;
+}
+.popup_contentarea.fall {
+    background-color: #fff0de;
+}
+.popup_contentarea.winter {
+    background-color: #fce8ff;
+}
+
 .popup_formove {
     padding: 0;
     width: auto;
@@ -701,8 +815,20 @@ a:active {
 
 .popup_img {
     height: 250px;
-    filter: drop-shadow(5px 10px 5px rgba(119, 62, 34, 0.5));
+    
 
+}
+.popup_img.spring {
+    filter: drop-shadow(5px 10px 5px rgba(119, 62, 34, 0.5));
+}
+.popup_img.summer {
+    filter: drop-shadow(5px 10px 5px rgba(34, 112, 119, 0.5));
+}
+.popup_img.fall {
+    filter: drop-shadow(5px 10px 5px rgba(119, 88, 34, 0.5));
+}
+.popup_img.winter {
+    filter: drop-shadow(5px 10px 5px rgba(82, 34, 119, 0.5));
 }
 
 .popup_right {
@@ -741,8 +867,16 @@ a:active {
     writing-mode: vertical-lr;
     letter-spacing: 10px;
 }
-.intro.content {
-    
+.rightarea_title.summer {
+    color: #1a6b5f;
+}
+.rightarea_title.fall {
+    color: #6b411a;
+}
+.rightarea_title.winter {
+    color: #5e1a6b;
+}
+.intro.content {   
     margin:  auto 30px;
     padding: 0;
     text-align: left;
@@ -750,11 +884,21 @@ a:active {
     line-height: 28px;
     /* align-items: center; */
     /* justify-content: center; */
-    
-
+}
+.intro.content.summer {
+    color: #184741;
+}
+.intro.content.fall {
+    color: #342212;
+}
+.intro.content.winter {
+    color: #2c1234;
 }
 .intro.tips_content {
     margin: 10px 0;
+}
+.intro.tips_content.summer {
+    color: #184741;
 }
 
 .kamei_line.underrightareacontent {

@@ -12,7 +12,7 @@
     
 </head>
 <body>
-    <div class="container container-summer">
+    <div class="container container-summer"  id="container">
         <div class="btn btn_back" id="btn_back" onclick="navigateToMainPage()" target="_blank"></div>
         <div class="menu">
             <div class="btn_menu mt summer" id="menutoprect">MENU</div>
@@ -43,27 +43,274 @@
         <div class="content-area content-area-summer">
             <div class="introduction-area">
                 <h1>夏</h1>
-                <h3 class="h3 h3-summer">なつの上生菓子</h3>
+                <h3 class="h3-summer">なつの上生菓子</h3>
                 <div class="introduction-content">
-                    <p>春の和菓子には、見た目にも美しい華やかな和菓子が多く、春の訪れを感じさせてくれるものが多いです。因此經常使用桜や梅、苺、柚子、あんず等材料。また、求肥や白玉粉、小豆や栗などもよく使用されます。</p>
+                    <p>夏季炎熱潮濕，容易讓人食欲減退。因此夏季的和菓子不僅塑造清涼的外表，在口感上也經過巧妙設計，多為順滑的口感與清爽的味道。</p>
                 </div>
             </div>
         </div>
         <div class="wagashi-area">
             <div class="wagashi-area_line1">
-                <img src="image/summer/m1.png" alt="" class="image_wagashi_summer image_wagashi_i1">
-                <img src="image/summer/m2.png" alt="" class="image_wagashi_summer image_wagashi_i2 small">
+                <img src="image/summer/m1.png" alt="" class="image_wagashi_summer image_wagashi_i1" id="wagashi_m1">
+                <img src="image/summer/m2.png" alt="" class="image_wagashi_summer image_wagashi_i2 small" id="wagashi_m2">
             </div>
             <div class="wagashi-area_line2"> <!--包含和菓子與說明文字在同一行-->
-                <img src="image/summer/m3.png" alt="" class="image_wagashi_summer image_wagashi_i3 small">
-                <img src="image/summer/m4.png" alt="" class="image_wagashi_summer image_wagashi_i4 small">
+                <img src="image/summer/m3.png" alt="" class="image_wagashi_summer image_wagashi_i3 small" id="wagashi_m3">
+                <img src="image/summer/m4.png" alt="" class="image_wagashi_summer image_wagashi_i4 small" id="wagashi_m4">
             </div>
             <div class="wagashi-area_line3">
-                <img src="image/summer/m5.png" alt="" class="image_wagashi_summer image_wagashi_i5 small">
-                <img src="image/summer/m6.png" alt="" class="image_wagashi_summer image_wagashi_i6">
+                <img src="image/summer/m5.png" alt="" class="image_wagashi_summer image_wagashi_i5 small" id="wagashi_m5">
+                <img src="image/summer/m6.png" alt="" class="image_wagashi_summer image_wagashi_i6" id="wagashi_m6">
             </div> 
         </div>   
-            
+    </div>    
+
+        <!--popup-->
+    <div class="popup popup_summer" id="popup_summer">
+        <div class="btn left" id="btn_left">
+            <img src="./image/btn-left.png" alt="" class="btnimage">
+        </div>
+         <!--第一個內容-->
+        <div class="popup_contentarea summer"  id="look1">
+            <!-- <div class="popup_contentarea"></div> -->
+           <div class="popup_left">
+                <img src="image/summer/m1.png" alt="" class="popup_img summer">
+                <div class="kamei">
+                    <div class="kamei_line summer"></div>
+                    <h1 class="kamei summer">天之川</h1>
+                    <div class="kamei_line summer"></div>
+                </div>
+                <h3 class="h3-summer sub">天の川</h3>
+                <p class="intro summer">夜色般的深藍琥珀羹代表無垠的宇宙，<br>上面點綴的金箔如同繁星，<br>象徵七夕時牛郎織女相會的銀河。</p>
+                <!-- text-align:justify 沒反應 -->
+           </div> 
+           <div class="popup_right">
+                <div class="rightarea_content">
+                    <h3 class="h3-summer rightarea_title summer">小暑</h3>
+                    <div class="intro content summer">暑中炎熱、<br>梅雨漸明，<br>三伏天宜乘涼伏居。</div>
+                </div>
+                <div class="kamei_line summer underrightareacontent"></div>
+                <div class="rightarea_content">
+                    <h3 class="h3-summer rightarea_title summer">材料</h3>
+                    <div class="intro content summer">粉狀寒天、水飴、砂糖</div>
+                </div>
+                <div class="kamei_line summer underrightareacontent"></div>
+                <div class="rightarea_content tipsarea">
+                    <div class="rightarea_content">
+                        <h3 class="h3-summer rightarea_title summer">小知識</h3>
+                        <div class="tips">
+                            <h4 class="h4 summer">日本的七夕</h4>
+                            <div class="intro tips_content summer">與台灣的七夕不同，日本的七夕是國曆七月七日。而在這天人們有將長條詩籤掛在細竹上的習俗，這是因為源自中國古代有向祈求裁縫技藝精進的儀式稱為「乞巧奠」，後傳到日本形成今日的許願籤。</div>
+                        </div>
+                        
+                    </div>
+                </div>
+           </div>
+
+
+        </div>
+         <!--第二個內容-->
+        <div class="popup_contentarea summer" id="look2">
+            <div class="popup_left">
+                 <img src="image/summer/m2.png" alt="" class="popup_img summer small">
+                 <div class="kamei">
+                     <div class="kamei_line summer"></div>
+                     <h1 class="kamei summer">宵花火</h1>
+                     <div class="kamei_line summer"></div>
+                 </div>
+                 <h3 class="h3-summer sub">よいはなび</h3>
+                 <p class="intro summer">使用包裹模糊技法以及<br>用三角棒和特殊細棒進行細緻的工藝，<br>描摹出在花火大會綻放的繽紛煙火。<br>品嚐時的瞬息即逝，也如同煙火本身的短暫美好。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-summer rightarea_title summer">大暑</h3>
+                     <div class="intro content summer">大暑熱不透、<br>大水風颱到，<br>氣候影響收成，也是一年最酷熱的時候。</div>
+                 </div>
+                 <div class="kamei_line summer underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-summer rightarea_title summer">材料</h3>
+                     <div class="intro content summer">七色練切、小豆豆沙餡</div>
+                 </div>
+                 <div class="kamei_line summer underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-summer rightarea_title summer">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 summer">日本的夏日祭典</h4>
+                             <div class="intro summer tips_content">現在熱鬧的夏日花火大會，其實最早是為了弔唁死者所舉辦的。人們為了因飢荒和流行病而逝去的人，舉行水神祭來紀念死者、驅除瘟疫，並燃放煙火。之後因煙火製作者地蓬勃發展而逐漸成為現在受人們喜愛的祭典。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+          <!--第三個內容-->
+        <div class="popup_contentarea summer" id="look3">
+            <div class="popup_left">
+                 <img src="image/summer/m4.png" alt="" class="popup_img summer small">
+                 <div class="kamei">
+                     <div class="kamei_line summer"></div>
+                     <h1 class="kamei summer">金魚</h1>
+                     <div class="kamei_line summer"></div>
+                 </div>
+                 <h3 class="h3-summer sub">きんぎょ</h3>
+                 <p class="intro summer">由錦玉形塑出金魚在水缸中悠游的模樣，<br>晶瑩剔透的外表就像是夏日的陽光折射在水面上。<br>整體以清新的檸檬香氣點綴，帶有淡淡的清香。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-summer rightarea_title summer">穀雨</h3>
+                     <div class="intro content summer">白晝最長、<br>炎夏降臨，<br>「夏至南風」吹拂，象徵梅雨將過。</div>
+                 </div>
+                 <div class="kamei_line summer underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-summer rightarea_title summer">材料</h3>
+                     <div class="intro content summer">粉末寒天、水、水飴</div>
+                 </div>
+                 <div class="kamei_line  summer underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-summer rightarea_title summer">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 summer">錦玉是什麼?</h4>
+                             <div class="intro tips_content summer">是一種由溶解寒天、加入糖和水飴製成的和菓子。而製作多層次的錦玉倒灌的時機非常重要。製作時將流動的糖漿分成四層，同時在其中裝飾用的羊羹，形成金魚的圖案。倒灌時機的不正確便難以形成美麗的圖樣。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+           <!--第四個內容-->
+        <div class="popup_contentarea summer" id="look4">
+            <div class="popup_left">
+                 <img src="image/summer/m6.png" alt="" class="popup_img summer small">
+                 <div class="kamei">
+                     <div class="kamei_line summer"></div>
+                     <h1 class="kamei summer">紫陽花</h1>
+                     <div class="kamei_line summer"></div>
+                 </div>
+                 <h3 class="h3-summer sub">アジサイ</h3>
+                 <p class="intro summer">用寒天覆上清爽的白豆沙，<br>晶瑩剔透的模樣猶如雨天的花瓣，<br>形成藍紫色的美麗花朵——紫陽花(繡球花)。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-summer rightarea_title summer">小滿</h3>
+                     <div class="intro content summer">麥粒漸滿、<br>雨水之盈，<br>作物即將邁入成熟階段。</div>
+                 </div>
+                 <div class="kamei_line summer underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-spring rightarea_title summer">材料</h3>
+                     <div class="intro content summer">水、白餡(白豆沙)、粉狀寒天</div>
+                 </div>
+                 <div class="kamei_line summer underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-summer rightarea_title summer">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 summer">為什麼繡球花有多種顏色?</h4>
+                             <div class="intro tips_content summer">最常見的繡球花是藍色、粉色與紫色，而顏色主要是受到土壤的酸鹼度影響。在中、鹼性的土壤中，會讓紫陽花色偏紅，若生長在酸性土壤，則會偏藍色。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+           <!--第五個內容-->
+        <div class="popup_contentarea summer" id="look5">
+            <div class="popup_left">
+                 <img src="image/summer/m5.png" alt="" class="popup_img summer small">
+                 <div class="kamei">
+                     <div class="kamei_line summer"></div>
+                     <h1 class="kamei summer">青梅</h1>
+                     <div class="kamei_line summer"></div>
+                 </div>
+                 <h3 class="h3-summer sub">おうめ</h3>
+                 <p class="intro summer">用練切包裹起梅子餡並形塑出青梅的模樣，<br>淡淡的梅子酸味使整體品嘗起來清新宜人。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-summer rightarea_title summer">芒種</h3>
+                     <div class="intro content summer">梅雨到來，<br>稻生細芒，<br>日本在此時雨水逐漸增多，進入梅雨季。</div>
+                 </div>
+                 <div class="kamei_line summer underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-spring rightarea_title summer">材料</h3>
+                     <div class="intro content summer">練切、梅子豆沙</div>
+                 </div>
+                 <div class="kamei_line summer underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-summer rightarea_title summer">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 summer">梅雨的當令食材—青梅</h4>
+                             <div class="intro tips_content summer">梅雨季開始的同時，原本苦澀的青梅逐漸轉變成為橘黃色的梅子。未成熟的青色果實可做梅酒，黃色的果實可做醃梅子，酸爽的味道在夏季十分受到青睞。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+           <!--第六個內容-->
+        <div class="popup_contentarea summer" id="look6">
+            <div class="popup_left">
+                 <img src="image/summer/m3.png" alt="" class="popup_img summer medium">
+                 <div class="kamei">
+                     <div class="kamei_line summer"></div>
+                     <h1 class="kamei summer">鯉魚旗</h1>
+                     <div class="kamei_line summer"></div>
+                 </div>
+                 <h3 class="h3-summer sub">鯉のぼり</h3>
+                 <p class="intro summer">可愛的鯉魚旗代表著日本兒童節的習俗，<br>有著祈願孩子平安成長、驅散不幸的寓意。</p>
+                 
+            </div> 
+            <div class="popup_right">
+                 <div class="rightarea_content">
+                     <h3 class="h3-summer rightarea_title summer">立夏</h3>
+                     <div class="intro content summer">晝長夜短，<br>氣溫升高，<br>植物成長茁壯徵夏季的到來。</div>
+                 </div>
+                 <div class="kamei_line summer underrightareacontent"></div>
+                 <div class="rightarea_content">
+                     <h3 class="h3-spring rightarea_title summer">材料</h3>
+                     <div class="intro content summer">白餡(白豆沙)、白玉粉、上白糖、こしあん</div>
+                 </div>
+                 <div class="kamei_line summer underrightareacontent"></div>
+                 <div class="rightarea_content tipsarea">
+                     <div class="rightarea_content">
+                         <h3 class="h3-summer rightarea_title summer">小知識</h3>
+                         <div class="tips">
+                             <h4 class="h4 summer">日本的兒童節</h4>
+                             <div class="intro tips_content summer">日本的兒童節(男孩節)與端午節同一天，在五月五號這天家裡有兒子的家庭會掛上五色的鯉魚旗。並且有在當天吃柏餅的習俗，柏葉在長出新芽長出之前都不會脫落，因此有「子孫繁盛」的寓意。</div>
+                         </div>
+                         
+                     </div>
+                 </div>
+            </div>
+ 
+ 
+         </div>
+
+        <div class="btn right" id="btn_right">
+            <img src="./image/btn-right.png" alt="" class="btnimage">
+        </div>
+        <div class="btn close" id="btn_close">
+            <img src="./image/close(green).png" alt="" class="btnimage close">
+        </div>
+    </div>
         
           
                 
@@ -79,8 +326,9 @@
         
 
     </div>
-    <script src="js/summer-animation.js"></script>
+    
     <script src="js/vendor/gsap.min.js" charset="UTF-8"></script>
     <script src="js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="js/summer-animation.js"></script>
 </body>
 </html>

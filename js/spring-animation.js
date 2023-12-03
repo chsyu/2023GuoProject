@@ -126,6 +126,12 @@ wagashi3.onclick = function() {
 };
 wagashi4.onclick = function() {
     if(clickstate == 0){
+        look1.style.display="none";
+        look2.style.display="none";
+        look3.style.display="none";
+        look4.style.display="none";
+        look5.style.display="none";
+        look6.style.display="none";
         gsap.fromTo("#popup_spring",1,{y:610},{y:0});
         container.classList.add("transparent");
         container.classList.add("transparent");

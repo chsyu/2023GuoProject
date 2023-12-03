@@ -7,28 +7,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.com/libraries/bodymovin"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-    <script src="js/vendor/gsap.min.js" charset="UTF-8"></script>
-    <script src="js/vendor/ScrollTrigger.min.js" charset="UTF-8"></script>
-    <script src="js/script.js" charset="UTF-8"></script>
+   
 
     
     
 </head>
 <body>
-    <div class="panel firstscene" id="firstscene">
-        <h1>hello</h1>
-    </div>
     <div class="doors" id="doors">
-        <div class="door leftdoor" id="leftdoor"></div>
-        <div class="door rightdoor" id="rightdoor"></div>
+        <div class="insidedoors" id="insidedoors">
+            <h3 class="history" id="history">現今和果子的原型源自奈良時代從唐朝傳入的「唐菓子」。這時期唐菓子的用途是用來祭神所用的祭品。而在鎌倉時代，從宋朝學法的僧人傳進羊羹類和饅頭類的食物以及茶苗，也帶回來「喝茶搭配吃點心」的習慣。後來經過口味調整後，逐漸發展成日本的特色甜點。
+                大小從原來的掌心大小，變為一口的大小。造型也變得色彩豐富，除了包含中國元素的桃子、兔子造型外，以櫻花、楓葉等植物造型的和風色彩也加入其中。後來自明治時代起，為了突顯出與歐洲傳入的糕點區別，因此改稱為「和菓子」。
+                現在，具生命力的和菓子成為日本獨特的糕點文化。隨著季節、地點的不同，日本各地皆有不同的銘菓(土產菓子)。</h3>
+            
+        </div>
+        
+        <div id="block-l" class="door"></div>
+        <div id="block-r" class="door right"></div>            
     </div>
-    <div class="secondscene" id="secondscene">
-        <h1>hey</h1>
+    <div class="doors" id="doors2">
+        <div class="insidedoors" id="insidedoors2">
+            <div class="temproom" id="temproom">
+                
+                <div class="gradient" id="gradient"></div>
+                <img src="./image/開蓋.png" alt="" class="gap" id="gap">
+            </div>
+        </div>
+        
+        <div id="block-l2" class="door"></div>
+        <div id="block-r2" class="door"></div>            
     </div>
-
+    
 
     <div class="container">
         <div class="content-area">
@@ -98,11 +108,9 @@
 
 
     </div>
+    <script src="js/vendor/jquery-3.4.1.min.js"></script>
     <script src="js/vendor/gsap.min.js" charset="UTF-8"></script>
     <script src="js/vendor/ScrollTrigger.min.js" charset="UTF-8"></script>
-
     <script src="js/script.js" charset="UTF-8"></script>
-    <script src="js/vendor/jquery-3.4.1.min.js"></script>
-    <script src="js/vendor/Flip.min.js"></script>
 </body>
 </html>
