@@ -467,6 +467,8 @@ a:active {
     background-image: url(../image/門2.png);
     background-position: left center;
 }
+
+
 .logoabovedoors {
     width: 80px;
     height: 500px;
@@ -547,4 +549,15 @@ a:active {
     background-size: cover;
     background-position: center center;
     /* background:linear-gradient(to bottom, #e6b884 0%, transparent 100%); */
+}
+
+
+.heShi {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
 }
